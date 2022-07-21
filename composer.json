@@ -1,0 +1,34 @@
+{
+    "name": "hexlet/php-project-lvl1-1",
+    "bin": ["bin/brain-games",
+            "bin/brain-even",
+            "bin/brain-calc",
+            "bin/brain-gcd"],
+    "type": "brain-games",
+
+    "authors": [
+        {
+            "name": "StenidoS",
+            "email": "os8333324@gmail.com"
+        }
+    ],
+    "autoload": {        
+        "psr-4": {"Hexlet\\Code\\": "src/"},
+        "files": [
+            "src/Cli.php", 
+            "src/Games/Clieven.php", 
+            "src/Games/Calc.php",
+            "src/Games/Gcd.php", 
+            "src/Engine.php"
+        ]
+    },
+    "description": "hexlet php-project-lvl1-1",
+    "license": "MIT",
+    
+    "require": {
+        "wp-cli/php-cli-tools": "^0.11.13"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "3.*"
+    }
+}
