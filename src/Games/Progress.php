@@ -4,29 +4,31 @@ use function cli\line;
 use function cli\prompt;
 use function Engine\congrat;
 use function Engine\salute;
+use function Engine\progression;
 
-function greetingCalc()
+function ProgressNambers()
 {
     //приветствие
     $name = salute();
     // задать вопрорсы, максимум 3 шт
-    line('What is the result of the expression?');
+    line('What number is missing in the progression?');
     for ($i = 0; $i <= 2; $i++) {
-        $number = rand(0, 10);
-        $number2 = rand(0, 10);
-        $index = rand(0, 2);
-        $input = array($number + $number2, $number - $number2, $number * $number2);
-        $rand_keys = $input[$index];
-        $input2 = array("$number + $number2", "$number - $number2", "$number * $number2");
-        $rand_keysy = $input2[$index];
+
+        $a1 = rand(1, 10);
+        $d = rand(2, 5);
+        $n = 1;
+        $max = rand(5, 15);
+        $val = progression($a, $d, $n, $max);
     //вывести сообщение и ввести ответ
-        line('Question: ' . $rand_keysy);
+        line('Question: ' . $val);
+
+        
         $answer = prompt('Your answer');
     //сравниваю ответ пользователя с правельным ответом
     // если да = ок и задаю следующий вопрос
     //если нет ... тогда ответ не верен и конец игре.
-        if ($answer != $rand_keys) {
-            line("'$answer' is wrong answer ;(. Correct answer was '$rand_keys'.)");
+        if ($answer != $val) {
+            line("'$answer' is wrong answer ;(. Correct answer was '$val'.)");
             break;
         } else {
             line('Correct!');

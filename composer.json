@@ -3,7 +3,9 @@
     "bin": ["bin/brain-games",
             "bin/brain-even",
             "bin/brain-calc",
-            "bin/brain-gcd"],
+            "bin/brain-prime",
+            "bin/brain-gcd",
+            "bin/brain-progression"],
     "type": "brain-games",
 
     "authors": [
@@ -18,7 +20,9 @@
             "src/Cli.php", 
             "src/Games/Clieven.php", 
             "src/Games/Calc.php",
-            "src/Games/Gcd.php", 
+            "src/Games/prime.php",
+            "src/Games/Gcd.php",
+            "src/Games/Progress.php", 
             "src/Engine.php"
         ]
     },
@@ -26,7 +30,7 @@
     "license": "MIT",
     
     "require": {
-        "wp-cli/php-cli-tools": "^0.11.13"
+        "wp-cli/php-cli-tools": "^0.11.14"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "3.*"
