@@ -12,7 +12,6 @@ function salute()
     line("Hello, %s!", $a);
     return $a;
 }
-
 function nod($a, $b)
 {
     while ($a != $b) {
@@ -24,7 +23,6 @@ function nod($a, $b)
         return $a;
     }
 }
-
 function Congrat($a, $b, $name)
 {
     if ($a == $b) {
@@ -34,7 +32,6 @@ function Congrat($a, $b, $name)
         line("Let's try again, %s!", $name);
     }
 }
-
 function IsPrime($n)
 {
     for($x = 2; $x < $n; $x++)

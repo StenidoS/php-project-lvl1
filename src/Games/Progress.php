@@ -8,9 +8,7 @@ use function Engine\progression;
 
 function ProgressNambers()
 {
-    //приветствие
     $name = salute();
-    // задать вопрорсы, максимум 3 шт
     line('What number is missing in the progression?');
     for ($i = 0; $i <= 2; $i++) {
         $val = '';
@@ -27,12 +25,8 @@ function ProgressNambers()
                 $val .= $a + $interval * $n . ' ';
             }
         }
-    //вывести сообщение и ввести ответ
         line('Question: ' . $val);
         $answer = prompt('Your answer');
-    //сравниваю ответ пользователя с правельным ответом
-    // если да = ок и задаю следующий вопрос
-    //если нет ... тогда ответ не верен и конец игре.
         if ($answer != $trueAnswer) {
             line("'$answer' is wrong answer ;(. Correct answer was '$trueAnswer'.)");
             break;
