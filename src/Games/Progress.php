@@ -13,22 +13,28 @@ function ProgressNambers()
     // задать вопрорсы, максимум 3 шт
     line('What number is missing in the progression?');
     for ($i = 0; $i <= 2; $i++) {
-
-        $a1 = rand(1, 10);
-        $d = rand(2, 5);
-        $n = 1;
-        $max = rand(5, 15);
-        $val = progression($a, $d, $n, $max);
+        $val = '';
+        $a = rand(1, 3);
+        $interval = rand(2, 5);
+        $b = rand(5, 10);
+        $propusk = rand(0, $b - 1);
+        for ($n = 0; $n <= $b - 1; $n++)
+        {
+            if ($n == $propusk) {
+                $trueAnswer = $a + $interval * $n;
+                $val .= '.. ';                
+            } else {
+                $val .= $a + $interval * $n . ' ';
+            }
+        }
     //вывести сообщение и ввести ответ
         line('Question: ' . $val);
-
-        
         $answer = prompt('Your answer');
     //сравниваю ответ пользователя с правельным ответом
     // если да = ок и задаю следующий вопрос
     //если нет ... тогда ответ не верен и конец игре.
-        if ($answer != $val) {
-            line("'$answer' is wrong answer ;(. Correct answer was '$val'.)");
+        if ($answer != $trueAnswer) {
+            line("'$answer' is wrong answer ;(. Correct answer was '$trueAnswer'.)");
             break;
         } else {
             line('Correct!');
