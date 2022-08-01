@@ -16,11 +16,10 @@ function ProgressNambers()
         $interval = rand(2, 5);
         $b = rand(5, 10);
         $propusk = rand(0, $b - 1);
-        for ($n = 0; $n <= $b - 1; $n++)
-        {
+        for ($n = 0; $n <= $b - 1; $n++) {
             if ($n == $propusk) {
                 $trueAnswer = $a + $interval * $n;
-                $val .= '.. ';                
+                $val .= '.. ';
             } else {
                 $val .= $a + $interval * $n . ' ';
             }

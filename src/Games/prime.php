@@ -14,11 +14,11 @@ function prime()
     for ($i = 0; $i <= 2; $i++) {
         $a = rand(1, 100);
         $ansPrime = IsPrime($a);
-        if ($ansPrime == 0){
+        if ($ansPrime == 0) {
             $ansPrime = 'no';
         } else {
-            $ansPrime = 'yes';;
-        }    
+            $ansPrime = 'yes';
+        }
         line('Question: ' . $a);
         $answer = prompt('Your answer');
         if (($answer != 'yes' || $answer != 'no') && $ansPrime != $answer) {
