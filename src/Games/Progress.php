@@ -6,7 +6,7 @@ use function Engine\congrat;
 use function Engine\salute;
 use function Engine\progression;
 
-function ProgressNambers()
+function Progress()
 {
     $name = salute();
     line('What number is missing in the progression?');
