@@ -48,9 +48,9 @@ function findGcd(int $number1, int $number2): int
 }
 
 
-function Congrat($a, $b, $name): void
+function Congrat(int $i, int $b, $name): void
 {
-    if ($a == $b) {
+    if ($i == $b) {
         line("Congratulations, %s!", $name);
         line('Next Game?');
     } else {
