@@ -4,9 +4,8 @@ use function cli\line;
 use function cli\prompt;
 use function Engine\congrat;
 use function Engine\salute;
-use function Engine\progression;
 
-function Progress()
+function PlayProgress()
 {
     $name = salute();
     line('What number is missing in the progression?');

@@ -5,7 +5,7 @@ namespace Engine;
 use function cli\line;
 use function cli\prompt;
 
-const ROUNDS_COUNT = 3;
+//const ROUNDS_COUNT = 3;
 
 function playGame(string $task, array $gameData): void
 {
