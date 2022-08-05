@@ -2,27 +2,37 @@
 
 use function cli\line;
 use function cli\prompt;
-use function Engine\nod;
-use function Engine\congrat;
-use function Engine\salute;
+use function Engine\playGame;
 
-function gcd()
+use const Engine\ROUNDS_COUNT;
+
+function findGcd(int $number1, int $number2): int
 {
-    //приветствие
-    $name = salute();
-    line('Find the greatest common divisor of given numbers.');
-    for ($i = 0; $i <= 2; $i++) {
-        $a = rand(1, 25);
-        $b = rand(1, 25);
-        $nod = nod($a, $b);
-        line('Question: ' . $a . ' ' . $b);
-        $answer = prompt('Your answer');
-        if ($answer != $nod) {
-            line("'$answer' is wrong answer ;(. Correct answer was '$nod'.");
-            break;
-        } else {
-            line('Correct!');
+    $result = 1;
+    for ($index = 1; $index < ($number1 + 1); $index++) {
+        if ($number1 % $index === 0 && $number2 % $index === 0) {
+            $result = $index;
         }
     }
-    congrat($i, 3, $name);
+    return $result;
+}
+
+function playGcd(): void
+{
+    $task = 'Find the greatest common divisor of given numbers.';
+    $gameData = [];
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
+        $randomNumber1 = random_int(1, 30);
+        $randomNumber2 = random_int(1, 30);
+        if ($randomNumber1 > $randomNumber2) {
+            $temp = $randomNumber1;
+            $randomNumber1 = $randomNumber2;
+            $randomNumber2 = $temp;
+        }
+        $correctAnswer = findGcd($randomNumber1, $randomNumber2);
+        $question = "{$randomNumber1 } {$randomNumber2}";
+        $gameData[] = ['question' => $question, 'correctAnswer' => (string)$correctAnswer];
+    }
+
+    playGame($task, $gameData);
 }
