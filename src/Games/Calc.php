@@ -12,11 +12,11 @@ function greetingCalc(): void
     for ($index = 0; $index <= 2; $index++) {
         $number = rand(0, 10);
         $number2 = rand(0, 10);
-        $index = rand(0, 2);
+        $in = rand(0, 2);
         $input = array($number + $number2, $number - $number2, $number * $number2);
-        $rand_keys = $input[$index];
+        $rand_keys = $input[$in];
         $input2 = array("$number + $number2", "$number - $number2", "$number * $number2");
-        $rand_keysy = $input2[$index];
+        $rand_keysy = $input2[$in];
         line('Question: ' . $rand_keysy);
         $answer = prompt('Your answer');
         if ($answer != $rand_keys) {
