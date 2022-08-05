@@ -1,8 +1,8 @@
 <?php
 
-use function Engine\playGame;
+namespace Games\Gcd;
 
-//use const Engine\ROUNDS_COUNT;
+use function Engine\playGame;
 
 function findGcd(int $number1, int $number2): int
 {
@@ -19,7 +19,7 @@ function playGcd(): void
 {
     $task = 'Find the greatest common divisor of given numbers.';
     $gameData = [];
-    for ($i = 0; $i <= 2 /*ROUNDS_COUNT*/; $i++) {
+    for ($i = 0; $i <= 2; $i++) {
         $randomNumber1 = random_int(1, 30);
         $randomNumber2 = random_int(1, 30);
         if ($randomNumber1 > $randomNumber2) {

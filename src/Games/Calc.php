@@ -1,30 +1,36 @@
 <?php
 
-use function cli\line;
-use function cli\prompt;
-use function Engine\Congrat;
-use function Engine\salute;
+namespace Games\Calc;
 
-function greetingCalc(): void
+use function Engine\playGame;
+
+function findResult(string $operator, int $number1, int $number2): int
 {
-    $name = salute();
-    line('What is the result of the expression?');
-    for ($index = 0; $index <= 2; $index++) {
-        $number = rand(0, 10);
-        $number2 = rand(0, 10);
-        $in = rand(0, 2);
-        $input = array($number + $number2, $number - $number2, $number * $number2);
-        $rand_keys = $input[$in];
-        $input2 = array("$number + $number2", "$number - $number2", "$number * $number2");
-        $rand_keysy = $input2[$in];
-        line('Question: ' . $rand_keysy);
-        $answer = prompt('Your answer');
-        if ($answer != $rand_keys) {
-            line("'$answer' is wrong answer ;(. Correct answer was '$rand_keys'.");
-            break;
-        } else {
-            line('Correct!');
-        }
+    switch ($operator) {
+        case '+':
+            return $number1 + $number2;
+        case '-':
+            return $number1 - $number2;
+        case '*':
+            return $number1 * $number2;
+        default:
+            throw new \Exception('Error');
     }
-    Congrat($index, 3, $name);
+}
+
+function playCalc(): void
+{
+    $task = 'What is the result of the expression?';
+    $gameData = [];
+    for ($i = 0; $i <= 2; $i++) {
+        $randomNumber1 = random_int(0, 10);
+        $randomNumber2 = random_int(0, 10);
+        $operator = ['*', '+', '-'];
+        $randomOperator = $operator[random_int(0, 2)];
+        $correctAnswer = findResult($randomOperator, $randomNumber1, $randomNumber2);
+        $question = "{$randomNumber1 } {$randomOperator } {$randomNumber2}";
+        $gameData[] = ['question' => $question, 'correctAnswer' => (string)$correctAnswer];
+    }
+
+    playGame($task, $gameData);
 }

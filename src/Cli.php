@@ -1,8 +1,13 @@
 <?php
 
-use function Engine\salute;
+namespace src\Cli;
+
+use function cli\line;
+use function cli\prompt;
 
 function greeting(): void
 {
-    $name = salute();
+    line('Welcome to the Brain Game!');
+    $name = prompt('May I have your name?');
+    line("Hello, %s!", $name);
 }
