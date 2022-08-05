@@ -12,8 +12,8 @@ function gcd()
     $name = salute();
     line('Find the greatest common divisor of given numbers.');
     for ($i = 0; $i <= 2; $i++) {
-        $a = rand(0, 10);
-        $b = rand(0, 10);
+        $a = rand(1, 25);
+        $b = rand(1, 25);
         $nod = nod($a, $b);
         line('Question: ' . $a . ' ' . $b);
         $answer = prompt('Your answer');
