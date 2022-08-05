@@ -18,7 +18,7 @@ function gcd()
         line('Question: ' . $a . ' ' . $b);
         $answer = prompt('Your answer');
         if ($answer != $nod) {
-            line("'$answer' is wrong answer ;(. Correct answer was '$nod'.)");
+            line("'$answer' is wrong answer ;(. Correct answer was '$nod'.");
             break;
         } else {
             line('Correct!');

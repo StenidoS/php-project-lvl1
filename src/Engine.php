@@ -29,7 +29,7 @@ function Congrat($a, $b, $name)
         line("Congratulations, %s!", $name);
         line('Next Game?');
     } else {
-        line("Let's try again, %s!", $name);
+        line("Let's try again, %s!)", $name);
     }
 }
 function IsPrime($n)
