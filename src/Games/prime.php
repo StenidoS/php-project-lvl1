@@ -2,7 +2,7 @@
 
 use function cli\line;
 use function cli\prompt;
-use function Engine\congrat;
+use function Engine\Congrat;
 use function Engine\salute;
 use function Engine\IsPrime;
 
@@ -21,12 +21,12 @@ function prime()
         }
         line('Question: ' . $a);
         $answer = prompt('Your answer');
-        if (($answer != 'yes' || $answer != 'no') && $ansPrime != $answer) {
-            line("'$answer' is wrong answer ;(. Correct answer was '$ansPrime'.)");
-            break;
-        } else {
+        if (($answer == 'yes' || $answer == 'no') && $ansPrime != $answer) {
             line('Correct!');
+        } else {
+            line("'$answer' is wrong answer ;(. Correct answer was '$ansPrime'.");
+            break;
         }
     }
-    congrat($i, 3, $name);
+    Congrat($i, 3, $name);
 }

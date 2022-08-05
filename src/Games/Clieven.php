@@ -2,7 +2,7 @@
 
 use function cli\line;
 use function cli\prompt;
-use function Engine\congrat;
+use function Engine\Congrat;
 use function Engine\salute;
 
 function greetingEven()
@@ -21,9 +21,9 @@ function greetingEven()
         if (($answer == 'yes' || $answer == 'no') && $number == $answer) {
             line('Correct!');
         } else {
-            line("'$answer' is wrong answer ;(. Correct answer was '$number'.)");
+            line("'$answer' is wrong answer ;(. Correct answer was '$number'.");
             break;
         }
     }
-    congrat($i, 3, $name);
+    Congrat($i, 3, $name);
 }

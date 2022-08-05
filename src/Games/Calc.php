@@ -2,7 +2,7 @@
 
 use function cli\line;
 use function cli\prompt;
-use function Engine\congrat;
+use function Engine\Congrat;
 use function Engine\salute;
 
 function greetingCalc()
@@ -20,11 +20,11 @@ function greetingCalc()
         line('Question: ' . $rand_keysy);
         $answer = prompt('Your answer');
         if ($answer != $rand_keys) {
-            line("'$answer' is wrong answer ;(. Correct answer was '$rand_keys'.)");
+            line("'$answer' is wrong answer ;(. Correct answer was '$rand_keys'.");
             break;
         } else {
             line('Correct!');
         }
     }
-    congrat($i, 3, $name);
+    Congrat($i, 3, $name);
 }

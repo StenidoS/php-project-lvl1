@@ -2,7 +2,7 @@
 
 use function cli\line;
 use function cli\prompt;
-use function Engine\congrat;
+use function Engine\Congrat;
 use function Engine\salute;
 
 function PlayProgress()
@@ -26,11 +26,11 @@ function PlayProgress()
         line('Question: ' . $val);
         $answer = prompt('Your answer');
         if ($answer != $trueAnswer) {
-            line("'$answer' is wrong answer ;(. Correct answer was '$trueAnswer'.)");
+            line("'$answer' is wrong answer ;(. Correct answer was '$trueAnswer'.");
             break;
         } else {
             line('Correct!');
         }
     }
-    congrat($i, 3, $name);
+    Congrat($i, 3, $name);
 }
