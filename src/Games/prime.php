@@ -6,7 +6,7 @@ use function Engine\Congrat;
 use function Engine\salute;
 use function Engine\IsPrime;
 
-function prime()
+function prime(): void
 {
     //приветствие
     $name = salute();

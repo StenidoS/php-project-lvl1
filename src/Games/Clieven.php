@@ -5,7 +5,7 @@ use function cli\prompt;
 use function Engine\Congrat;
 use function Engine\salute;
 
-function greetingEven()
+function greetingEven(): void
 {
     $name = salute();
     line('Answer "yes" if the number is even, otherwise answer "no".');

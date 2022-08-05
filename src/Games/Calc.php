@@ -5,7 +5,7 @@ use function cli\prompt;
 use function Engine\Congrat;
 use function Engine\salute;
 
-function greetingCalc()
+function greetingCalc(): void
 {
     $name = salute();
     line('What is the result of the expression?');
