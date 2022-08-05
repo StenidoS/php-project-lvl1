@@ -48,7 +48,7 @@ function findGcd(int $number1, int $number2): int
 }
 
 
-function Congrat(int $i, int $b, $name): void
+function Congrat(int $i, int $b, mixed $name): void
 {
     if ($i == $b) {
         line("Congratulations, %s!", $name);
