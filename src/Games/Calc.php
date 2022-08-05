@@ -9,7 +9,7 @@ function greetingCalc(): void
 {
     $name = salute();
     line('What is the result of the expression?');
-    for ($i = 0; $i <= 2; $i++) {
+    for ($index = 0; $index <= 2; $index++) {
         $number = rand(0, 10);
         $number2 = rand(0, 10);
         $index = rand(0, 2);
@@ -26,5 +26,5 @@ function greetingCalc(): void
             line('Correct!');
         }
     }
-    Congrat($i, 3, $name);
+    Congrat($index, 3, $name);
 }
