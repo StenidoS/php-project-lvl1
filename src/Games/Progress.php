@@ -5,7 +5,7 @@ use function cli\prompt;
 use function Engine\Congrat;
 use function Engine\salute;
 
-function PlayProgress()
+function PlayProgress(): void
 {
     $name = salute();
     line('What number is missing in the progression?');

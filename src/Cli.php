@@ -2,7 +2,7 @@
 
 use function Engine\salute;
 
-function greeting()
+function greeting(): void
 {
     $name = salute();
 }

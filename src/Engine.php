@@ -20,7 +20,7 @@ function playGame(string $task, array $gameData): void
         $userAnswer = prompt("Question: {$question}");
 
         if ($userAnswer === $correctAnswer) {
-            line("Your answer: %s\nCorrect!", $userAnswer);
+            line("Your answer: %s!\nCorrect!", $userAnswer);
         } else {
             line("'%s' is wrong answer ;(. Correct answer was '%s'.\n" .
                 "Let's try again, %s!", $userAnswer, $correctAnswer, $name);
@@ -29,7 +29,7 @@ function playGame(string $task, array $gameData): void
     }
     line("Congratulations, %s!", $name);
 }
-function salute()
+function salute(): string
 {
     line('Welcome to the Brain Games!');
     $a = prompt('May I have your name?');
