@@ -1,5 +1,5 @@
 {
-    "name": "hexlet/php-project-lvl1-1",
+    "name": "hexlet/code",
     "bin": ["bin/brain-games",
             "bin/brain-even",
             "bin/brain-calc",

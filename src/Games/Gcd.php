@@ -21,7 +21,7 @@ function gcd()
             line("'$answer' is wrong answer ;(. Correct answer was '$nod'.)");
             break;
         } else {
-            line('Correct!' . $i);
+            line('Correct!');
         }
     }
     congrat($i, 3, $name);
