@@ -28,11 +28,15 @@
     },
     "description": "hexlet php-project-lvl1-1",
     "license": "MIT",
-    
+    "scripts": {
+        "test": "phpunit tests"
+    },    
     "require": {
-        "wp-cli/php-cli-tools": "^0.11.14"
+        "wp-cli/php-cli-tools": "^0.11.13"
     },
     "require-dev": {
-        "squizlabs/php_codesniffer": "3.*"
+        "roave/security-advisories": "dev-latest",
+        "squizlabs/php_codesniffer": "^3.6",
+        "phpunit/phpunit": "^9.5"
     }
 }
