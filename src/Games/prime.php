@@ -21,7 +21,7 @@ function prime()
         }
         line('Question: ' . $a);
         $answer = prompt('Your answer');
-        if (($answer == 'yes' || $answer == 'no') && $ansPrime != $answer) {
+        if (($answer == 'yes' || $answer == 'no') && $ansPrime == $answer) {
             line('Correct!');
         } else {
             line("'$answer' is wrong answer ;(. Correct answer was '$ansPrime'.");
