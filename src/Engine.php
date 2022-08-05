@@ -57,7 +57,7 @@ function Congrat(int $i, int $b, mixed $name): void
         line("Let's try again, %s!)", $name);
     }
 }
-function IsPrime($n): bool
+function IsPrime(int $n): bool
 {
     for ($x = 2; $x < $n; $x++) {
         if ($n % $x == 0) {
