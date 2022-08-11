@@ -13,7 +13,11 @@ function playCalculate(): void
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $randomNumber1 = random_int(0, 10);
         $randomNumber2 = random_int(0, 10);
-        $input = ['*' => $randomNumber1 * $randomNumber2, '+' => $randomNumber1 + $randomNumber2, '-' => $randomNumber1 - $randomNumber2];
+        $input = [
+            '*' => $randomNumber1 * $randomNumber2,
+            '+' => $randomNumber1 + $randomNumber2,
+            '-' => $randomNumber1 - $randomNumber2
+        ];
         $randomOperator = array_rand($input, 1);
         $correctAnswer = $input[$randomOperator];
         $question = "{$randomNumber1 } {$randomOperator } {$randomNumber2}";
