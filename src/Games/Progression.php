@@ -4,6 +4,8 @@ namespace Games\Progression;
 
 use function Engine\playGame;
 
+use const Engine\ROUNDS_COUNT;
+
 function generateProgression(): array
 {
     $startProgression = random_int(1, 50);
@@ -21,7 +23,7 @@ function playProgression(): void
 {
     $task = 'What number is missing in the progression?';
     $gameData = [];
-    for ($i = 0; $i <= 2; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $progression = generateProgression();
         $randomNumberQuestion = random_int(0, 9);
         $correctAnswer = $progression[$randomNumberQuestion];

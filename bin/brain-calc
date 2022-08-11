@@ -8,6 +8,6 @@ if (file_exists($autoloadPath1)) {
 } else {
     require_once $autoloadPath2;
 }
-use function Games\Calc\playCalc;
+use function Games\Calc\playCalculate;
 
-playCalc();
+playCalculate();

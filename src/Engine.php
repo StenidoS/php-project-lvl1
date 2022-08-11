@@ -2,8 +2,12 @@
 
 namespace Engine;
 
+use PHPUnit\TextUI\XmlConfiguration\Constant;
+
 use function cli\line;
 use function cli\prompt;
+
+const ROUNDS_COUNT = 3;
 
 function playGame(string $task, array $gameData): void
 {

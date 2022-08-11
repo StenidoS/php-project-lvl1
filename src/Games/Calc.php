@@ -4,6 +4,8 @@ namespace Games\Calc;
 
 use function Engine\playGame;
 
+use const Engine\ROUNDS_COUNT;
+
 function findResult(string $operator, int $number1, int $number2): int
 {
     switch ($operator) {
@@ -18,11 +20,11 @@ function findResult(string $operator, int $number1, int $number2): int
     }
 }
 
-function playCalc(): void
+function playCalculate(): void
 {
     $task = 'What is the result of the expression?';
     $gameData = [];
-    for ($i = 0; $i <= 2; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $randomNumber1 = random_int(0, 10);
         $randomNumber2 = random_int(0, 10);
         $operator = ['*', '+', '-'];
