@@ -6,7 +6,7 @@ use function Engine\playGame;
 
 use const Engine\ROUNDS_COUNT;
 
-function findResult(string $operator, int $number1, int $number2): int
+function calculate(string $operator, int $number1, int $number2): int
 {
     switch ($operator) {
         case '+':
@@ -29,7 +29,7 @@ function playCalculate(): void
         $randomNumber2 = random_int(0, 10);
         $operator = ['*', '+', '-'];
         $randomOperator = $operator[random_int(0, 2)];
-        $correctAnswer = findResult($randomOperator, $randomNumber1, $randomNumber2);
+        $correctAnswer = calculate($randomOperator, $randomNumber1, $randomNumber2);
         $question = "{$randomNumber1 } {$randomOperator } {$randomNumber2}";
         $gameData[] = ['question' => $question, 'correctAnswer' => (string)$correctAnswer];
     }
