@@ -4,6 +4,7 @@ namespace Games\Progression;
 
 use function Engine\playGame;
 
+const DESCRIPTION = 'What number is missing in the progression?';
 use const Engine\ROUNDS_COUNT;
 
 function generateProgression(): array
@@ -21,7 +22,6 @@ function generateProgression(): array
 
 function playProgression(): void
 {
-    $task = 'What number is missing in the progression?';
     $gameData = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $progression = generateProgression();
@@ -32,5 +32,5 @@ function playProgression(): void
         $question = implode(' ', $progression);
         $gameData[] = ['question' => $question, 'correctAnswer' => (string)$correctAnswer];
     }
-    playGame($task, $gameData);
+    playGame(DESCRIPTION, $gameData);
 }

@@ -4,6 +4,7 @@ namespace Games\Prime;
 
 use function Engine\playGame;
 
+const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 use const Engine\ROUNDS_COUNT;
 
 function isPrime(int $number): bool
@@ -20,7 +21,6 @@ function isPrime(int $number): bool
 
 function playPrime(): void
 {
-    $task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $gameData = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $randomNumber = random_int(2, 50);
@@ -30,5 +30,5 @@ function playPrime(): void
         $gameData[] = ['question' => $question, 'correctAnswer' => $correctAnswer];
     }
 
-    playGame($task, $gameData);
+    playGame(DESCRIPTION, $gameData);
 }

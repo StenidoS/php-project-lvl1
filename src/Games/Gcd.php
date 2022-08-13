@@ -4,6 +4,7 @@ namespace Games\Gcd;
 
 use function Engine\playGame;
 
+const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 use const Engine\ROUNDS_COUNT;
 
 function findGcd(int $number1, int $number2): int
@@ -19,7 +20,6 @@ function findGcd(int $number1, int $number2): int
 
 function playGcd(): void
 {
-    $task = 'Find the greatest common divisor of given numbers.';
     $gameData = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $randomNumber1 = random_int(1, 30);
@@ -34,5 +34,5 @@ function playGcd(): void
         $gameData[] = ['question' => $question, 'correctAnswer' => (string)$correctAnswer];
     }
 
-    playGame($task, $gameData);
+    playGame(DESCRIPTION, $gameData);
 }
