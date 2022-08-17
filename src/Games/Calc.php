@@ -20,7 +20,7 @@ function playCalculate(): void
         ];
         $randomOperator = array_rand($input, 1);
         $correctAnswer = $input[$randomOperator];
-        $question = "{$randomNumber1 } {$randomOperator } {$randomNumber2}";
+        $question = "{$randomNumber1} {$randomOperator} {$randomNumber2}";
         $gameData[] = ['question' => $question, 'correctAnswer' => (string)$correctAnswer];
     }
     playGame(DESCRIPTION, $gameData);
