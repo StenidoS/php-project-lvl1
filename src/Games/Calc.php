@@ -18,7 +18,7 @@ function playCalculate(): void
             '+' => $randomNumber1 + $randomNumber2,
             '-' => $randomNumber1 - $randomNumber2
         ];
-        $randomOperator = array_rand($input, 1);
+        $randomOperator = array_rand($input);
         $correctAnswer = $input[$randomOperator];
         $question = "{$randomNumber1} {$randomOperator} {$randomNumber2}";
         $gameData[] = ['question' => $question, 'correctAnswer' => (string)$correctAnswer];
