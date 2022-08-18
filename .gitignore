@@ -1,3 +1,4 @@
-/vendor/
-/PHP_CodeSniffer/
 /.vscode/
+/PHP_CodeSniffer/
+/vendor/
+
