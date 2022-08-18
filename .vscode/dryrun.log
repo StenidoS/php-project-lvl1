@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/root/php-project-lvl1-1'
+composer install
+make: Leaving directory '/root/php-project-lvl1-1'
+ 
