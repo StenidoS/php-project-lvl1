@@ -9,18 +9,6 @@ use const Engine\ROUNDS_COUNT;
 
 function playCalculate(): void
 {
-    $gameData = [];
-    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
-        $randomNumber1 = random_int(0, 10);
-        $randomNumber2 = random_int(0, 10);
-        $input = ['+', '-', '*'];
-        $randomOperator = $input[array_rand($input)];
-        $correctAnswer = CalcOperatorRandom($randomNumber1, $randomNumber2, $randomOperator);
-        $question = "{$randomNumber1} {$randomOperator} {$randomNumber2}";
-        $gameData[] = ['question' => $question, 'correctAnswer' => (string)$correctAnswer];
-    }
-    playGame(DESCRIPTION, $gameData);
-
     function CalcOperatorRandom(int $randomNumber1, int $randomNumber2, string $randomOperator)
     {
         switch ($randomOperator) {
@@ -34,4 +22,16 @@ function playCalculate(): void
                 return "Incorrect sign: '{$randomOperator}'";
         }
     }
+
+    $gameData = [];
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
+        $randomNumber1 = random_int(0, 10);
+        $randomNumber2 = random_int(0, 10);
+        $input = ['+', '-', '*'];
+        $randomOperator = $input[array_rand($input)];
+        $correctAnswer = CalcOperatorRandom($randomNumber1, $randomNumber2, $randomOperator);
+        $question = "{$randomNumber1} {$randomOperator} {$randomNumber2}";
+        $gameData[] = ['question' => $question, 'correctAnswer' => (string)$correctAnswer];
+    }
+    playGame(DESCRIPTION, $gameData);    
 }
