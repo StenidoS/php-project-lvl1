@@ -2,8 +2,6 @@
 
 namespace Engine;
 
-use PHPUnit\TextUI\XmlConfiguration\Constant;
-
 use function cli\line;
 use function cli\prompt;
 
