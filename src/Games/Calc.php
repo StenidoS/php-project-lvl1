@@ -33,5 +33,5 @@ function playCalculate(): void
         $question = "{$randomNumber1} {$randomOperator} {$randomNumber2}";
         $gameData[] = ['question' => $question, 'correctAnswer' => (string)$correctAnswer];
     }
-    playGame(DESCRIPTION, $gameData);    
+    playGame(DESCRIPTION, $gameData);
 }
