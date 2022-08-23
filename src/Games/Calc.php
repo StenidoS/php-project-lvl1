@@ -3,10 +3,23 @@
 namespace Games\Calc;
 
 use function Engine\playGame;
-use function Engine\Calculate;
 
 const DESCRIPTION = "What is the result of the expression?";
 use const Engine\ROUNDS_COUNT;
+
+function Calculate(int $randomNumber1, int $randomNumber2, string $randomOperator)
+{
+    switch ($randomOperator) {
+        case "+":
+            return $randomNumber1 + $randomNumber2;
+        case "-":
+            return $randomNumber1 - $randomNumber2;
+        case "*":
+            return $randomNumber1 * $randomNumber2;
+        default:
+            return "Incorrect sign: '{$randomOperator}'";
+    }
+}
 
 function playCalculate(): void
 {
