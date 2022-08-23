@@ -9,7 +9,7 @@ use const Engine\ROUNDS_COUNT;
 
 function playCalculate(): void
 {
-    function CalcOperatorRandom(int $randomNumber1, int $randomNumber2, string $randomOperator)
+    function Calculate(int $randomNumber1, int $randomNumber2, string $randomOperator)
     {
         switch ($randomOperator) {
             case "+":
@@ -29,7 +29,7 @@ function playCalculate(): void
         $randomNumber2 = random_int(0, 10);
         $input = ['+', '-', '*'];
         $randomOperator = $input[array_rand($input)];
-        $correctAnswer = CalcOperatorRandom($randomNumber1, $randomNumber2, $randomOperator);
+        $correctAnswer = Calculate($randomNumber1, $randomNumber2, $randomOperator);
         $question = "{$randomNumber1} {$randomOperator} {$randomNumber2}";
         $gameData[] = ['question' => $question, 'correctAnswer' => (string)$correctAnswer];
     }
