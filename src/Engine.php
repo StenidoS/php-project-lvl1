@@ -29,3 +29,17 @@ function playGame(string $task, array $gameData): void
     }
     line("Congratulations, %s!", $name);
 }
+
+function Calculate(int $randomNumber1, int $randomNumber2, string $randomOperator)
+{
+    switch ($randomOperator) {
+        case "+":
+            return $randomNumber1 + $randomNumber2;
+        case "-":
+            return $randomNumber1 - $randomNumber2;
+        case "*":
+            return $randomNumber1 * $randomNumber2;
+        default:
+            return "Incorrect sign: '{$randomOperator}'";
+    }
+}
