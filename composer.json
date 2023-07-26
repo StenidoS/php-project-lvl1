@@ -32,11 +32,11 @@
         "test": "phpunit tests"
     },    
     "require": {
-        "wp-cli/php-cli-tools": "^0.11.13"
+        "wp-cli/php-cli-tools": "^v0.11.19"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest",
-        "squizlabs/php_codesniffer": "^3.6",
-        "phpunit/phpunit": "^9.5"
+        "squizlabs/php_codesniffer": "^3.7.2",
+        "phpunit/phpunit": "^10.2.6"
     }
 }
