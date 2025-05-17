@@ -2,3 +2,5 @@ PHP_CodeSniffer/
 vendor/
 .vscode/
 
+database.sqlite
+.home
